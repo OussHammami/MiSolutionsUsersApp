@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="example">
+    <div id="grid">
+    </div>
+<script>
+
+        $(document).ready(function () {
+            $("#grid").kendoGrid({
+                dataSource: {
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: "/api/GitHubUser",
+                        },
+                        update: {
+                            url: function (data) {
+                                return "/api/GitHubUser/AddOrUpdate?ID=" + data.models[0].id + "&Login=" + data.models[0].login + "&Avatar=" + data.models[0].avatar_url + "&ProfileUrl=" + data.models[0].url + "&RepositoriesUrl=" + data.models[0].repos_url },
+                            type: "PUT",
+                            dataType: "json",
+                            contentType: "application/json"
+                        },
+                        parameterMap: function (options, operation) {
+                            if (operation !== "read" && options.models) {
+                                return { models: kendo.stringify(options.models) };
+                            }
+                        }
+                    },
+                    batch: true,
+                    pageSize: 5,
+                    schema: {
+                        model: {
+                            id: "id",
+                            fields: {
+                                id: { editable: false },
+                                avatar_url: { editable: false },
+                                login: { type: "string", editable: true },
+                                profil: { editable: false },
+                                repo: { editable: false }
+                            }
+                        }
+                    }
+                },
+                columns: [
+                    {
+                        field: "avatar_url",
+                        title: "Avatar",
+                        attributes: {
+                            "class": "avatar"
+                        },
+                        template: '<img src="#: avatar_url #" alt="image" />',
+                        width: 150
+                    },
+                    {
+                        field: "login",
+                        title: "Login",
+                        attributes: {
+                            "class": "login"
+                        },
+                        width: 100
+                    },
+                    {
+                        field: "profil",
+                        attributes: {
+                            "class": "profile"
+                        },
+                        template: '<a href="https://github.com/#: login #">Go to GitHub Profil</a>',
+                        width: 150
+                    },
+                    {
+                        field: "repo",
+                        attributes: {
+                            "class": "repos"
+                        },
+                        template: "<a href=@Server.UrlDecode(Url.Action("Index", "Repository", new { url = "#=repos_url#", login = "#=login#" }))>Go to Repositories</a >",
+                        width: 150
+
+                    }],
+                editable: true,
+                pageable: true,
+                toolbar: ["save", "cancel"],
+            });
+        });
+</script>
+</div>

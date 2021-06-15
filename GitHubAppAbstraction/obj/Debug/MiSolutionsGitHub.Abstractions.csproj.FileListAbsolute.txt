@@ -1,0 +1,7 @@
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\bin\Debug\GitHubAppAbstraction.dll.config
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\bin\Debug\GitHubAppAbstraction.dll
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\bin\Debug\GitHubAppAbstraction.pdb
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\obj\Debug\MiSolutionsGitHub.Abstractions.csproj.CoreCompileInputs.cache
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\obj\Debug\GitHubAppAbstraction.dll
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\obj\Debug\GitHubAppAbstraction.pdb
+C:\MySpace\Git\MiSolutionsUsersApp\GitHubAppAbstraction\obj\Debug\MiSolutionsGitHub.Abstractions.csproj.AssemblyReference.cache

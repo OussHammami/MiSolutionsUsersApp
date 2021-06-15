@@ -1,0 +1,83 @@
+﻿@model MiSolutionsUsersSolution.Models.GitHubUserModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div id="example">
+    <table id="grid">
+        <colgroup>
+            <col class="repoName" />
+            <col class="repoDate" />
+            <col class="language" />
+            <col class="repoPage" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Creation Date
+                </th>
+                <th>
+                    Language
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <script id="rowTemplate" type="text/x-kendo-tmpl">
+        <tr data-uid="#: id #">
+            <td class="repoName">
+                <span>#: name #</span>
+            </td>
+            <td class="repoDate">
+                <span>#: kendo.toString(kendo.parseDate(created_at, 'yyyy-MM-dd'), 'MM/dd/yyyy') #</span>
+            </td>
+            <td class="language">
+                <span>#: language ?? '' #</span>
+            </td>
+            <td class="repoPage">
+                <a href="https://github.com/@(Model.Login)/#: name #">Go to Repository page</a>
+            </td>
+        </tr>
+    </script>
+    <script id="alterRowTemplate" type="text/x-kendo-tmpl">
+        <tr class="k-alt" data-uid="#: id #">
+            <td class="repoName">
+                <span>#: name #</span>
+            </td>
+            <td class="repoDate">
+                <span>#: kendo.toString(kendo.parseDate(created_at, 'yyyy-MM-dd'), 'MM/dd/yyyy') #</span>
+            </td>
+            <td class="language">
+                <span>#: language ?? '' #</span>
+            </td>
+            <td class="repoPage">
+                <a href="https://github.com/@(Model.Login)/#: name #">Go to Repository page</a>
+            </td>
+        </tr>
+    </script>
+    <script>
+            $(document).ready(function () {
+                $("#grid").kendoGrid({
+                    dataSource: {
+                        type: "json",
+                        transport: {
+                            read: {
+                                url: "/api/GitHubRepository/get?reposUrl=@(Model.RepositoriesUrl)"
+                            }
+                        }
+                    },
+                    rowTemplate: kendo.template($("#rowTemplate").html()),
+                    altRowTemplate: kendo.template($("#alterRowTemplate").html()),
+                    height: 800,
+                    width: 1300
+                });
+            });
+    </script>
+</div>

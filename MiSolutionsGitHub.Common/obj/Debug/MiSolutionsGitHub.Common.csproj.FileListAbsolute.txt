@@ -1,0 +1,13 @@
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\MiSolutionsGitHub.Common.dll.config
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\MiSolutionsGitHub.Common.dll
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\MiSolutionsGitHub.Common.pdb
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\GitHubAppAbstraction.dll
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\Newtonsoft.Json.dll
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\GitHubAppAbstraction.pdb
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\GitHubAppAbstraction.dll.config
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\bin\Debug\Newtonsoft.Json.xml
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\obj\Debug\MiSolutionsGitHub.Common.csproj.AssemblyReference.cache
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\obj\Debug\MiSolutionsGitHub.Common.csproj.CoreCompileInputs.cache
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\obj\Debug\MiSolutionsGitHub.Common.csproj.CopyComplete
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\obj\Debug\MiSolutionsGitHub.Common.dll
+C:\MySpace\Git\MiSolutionsUsersApp\MiSolutionsGitHub.Common\obj\Debug\MiSolutionsGitHub.Common.pdb
